@@ -12,29 +12,28 @@ public class Heading {
     }
 
     public String getDirection() {
-        // TODO: implement
-        return "";
+        return this.direction;
     }
 
     public float getTime() {
-        // TODO: implement
-        return 0.0f;
+        return this.time;
     }
 
     public float getSpeedInKnots() {
-        // TODO: implement
-        return 0.0f;
+        return this.speedInKnots;
     }
 
     @Override
     public String toString() {
-        // TODO: implement
-        return "";
+        return String.format("Heading{direction=%s, time=%.2f, speed=%.2f}",
+                direction, time, speedInKnots);
     }
 
     @Override
     public boolean equals(Object otherHeading) {
-        // TODO: implement
-        return false;
+        Heading thatHeading = (Heading)otherHeading;
+        return this.direction.equals(thatHeading.getDirection())
+                && this.time == thatHeading.getTime()
+                && this.speedInKnots == thatHeading.getSpeedInKnots();
     }
 }
